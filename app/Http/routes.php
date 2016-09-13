@@ -74,6 +74,8 @@ Route::get('age/refuse', ['as' => 'refuse', function(){
     });
 });*/
 
+
+//群组路由
 Route::group(['middleware'=>'auth', 'namespace'=>'Admin', 'prefix'=>'admin'], function(){
     Route::get('/', 'HomeController@index');
     Route::resource('article', 'ArticleController');
